@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary Search System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dictionary Search System</h1>
+
+      <div class="card">
+        <h2>Add Word</h2>
+
+        <div class="input-group">
+          <input type="text" id="addWordInput" placeholder="Enter word" />
+          <button onclick="addWord()">Add</button>
+        </div>
+
+        <p id="addResult" class="result"></p>
+      </div>
+
+      <div class="card">
+        <h2>Search Word</h2>
+
+        <div class="input-group">
+          <input type="text" id="searchInput" placeholder="Search word" />
+          <button onclick="searchWord()">Search</button>
+        </div>
+
+        <p id="searchResult" class="result"></p>
+      </div>
+
+      <div class="card">
+        <h2>Auto Suggestions</h2>
+
+        <input
+          type="text"
+          id="prefixInput"
+          placeholder="Start typing..."
+          oninput="getSuggestions()"
+        />
+
+        <ul id="suggestionList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
